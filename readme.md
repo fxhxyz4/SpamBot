@@ -2,8 +2,8 @@
 
 ### Features:
 
-- ### [auto-spam](https://github.com/fxhxyz4/spam_bot/edit/main/readme.md#enable-auto-spam-change-this-line-in-config).
-- ### [commands](https://github.com/fxhxyz4/spam_bot/edit/main/readme.md#commands-1).
+- ### [auto-spam](https://github.com/fxhxyz4/spam_bot#enable-auto-spam-change-this-line-in-config).
+- ### [commands](https://github.com/fxhxyz4/spam_bot#commands-1).
 
 #
 
@@ -92,4 +92,4 @@ npm run server
 
 #
 
-### License [MIT](./license)
+### License: [MIT](./license).
