@@ -68,7 +68,7 @@ count: 20, // amount messages
 
 #
 
-### cahnge user_id in index.js
+### change user_id in index.js
 
 ```
 const user_id = "YOUR_TWITCH_ID";
@@ -80,6 +80,14 @@ const user_id = "YOUR_TWITCH_ID";
 
 ```
 npm run dev
+```
+
+#
+
+### production
+
+```
+npm run server
 ```
 
 #
