@@ -2,8 +2,6 @@ import { config } from "./config/config.js";
 import tmi from "tmi.js";
 
 let { user, token, channels, spam, message = "ppL", repeat = 30, count = 15 } = config;
-
-// change user_id
 const user_id = "603173186";
 
 const opts = {
@@ -22,9 +20,15 @@ const client = new tmi.client(opts);
 client.connect();
 
 if (spam === true) {
+  let array = message.split("");
+  let i = array[0];
+
+  let msg = array.join("").replace(i, ` ${i}`);
+  let resMsg = msg.repeat(repeat);
+
   client.on("join", (channel) => {
     for (let k = 0; k < count; k++) {
-      client.say(channel, message.repeat(repeat));
+      client.say(channel, resMsg);
     }
 
     client.disconnect();
