@@ -1,7 +1,7 @@
 {
   "name": "spam_bot",
   "version": "1.0.0",
-  "description": "Random Twitch Message",
+  "description": "Spam bot for twitch.tv",
   "keywords": [
     "spam-bot",
     "twitch-bot",
