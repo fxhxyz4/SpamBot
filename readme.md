@@ -5,6 +5,8 @@
 - ### [auto-spam](https://github.com/fxhxyz4/spam_bot#enable-auto-spam-change-this-line-in-config).
 - ### [commands](https://github.com/fxhxyz4/spam_bot#commands-1).
 
+- ### [auto-ban]().
+
 #
 
 ### Commands:
@@ -49,6 +51,22 @@ channels: ["#channel", "#channel2", "#channel3"], // channel list.
 
 #
 
+### enable auto-ban. set to true in config.js
+
+```js
+ban: true,
+```
+
+#
+
+### add words to auto-ban.
+
+```js
+blist: ["word1", "word2"],
+```
+
+#
+
 ### enable auto-spam. change this line in config
 
 ```js
@@ -84,7 +102,7 @@ npm run dev
 
 #
 
-### production
+### deploy
 
 ```
 npm run server
