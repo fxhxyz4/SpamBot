@@ -1,7 +1,7 @@
 import { config } from "./config/config.js";
 import tmi from "tmi.js";
 
-let { user, token, channels, spam, message = "ppL", repeat = 30, count = 15 } = config;
+let { user, token, channels, ban, blist, spam, message = "ppL", repeat = 30, count = 15 } = config;
 const user_id = "603173186";
 
 const opts = {
@@ -37,6 +37,25 @@ if (spam === true) {
       client.connect();
     }, 15 * 1000);
   });
+}
+
+if (ban === true) {
+  client.on("message", checkChat);
+}
+
+function checkChat(channel, username, message) {
+  let shouldSendMessage = false;
+  message = message.toLowerCase();
+
+  shouldSendMessage = blist.some((blockedWord) => message.includes(blockedWord.toLowerCase()));
+  if (shouldSendMessage) {
+    client
+      .ban(channel, username.username)
+      .then((data) => {})
+      .catch((err) => {});
+
+    client.say(channel, `${username.username}, banned`);
+  }
 }
 
 client.on("message", (channel, tags, message, self) => {
