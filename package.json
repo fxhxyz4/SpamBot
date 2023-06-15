@@ -1,5 +1,5 @@
 {
-  "name": "spam_bot",
+  "name": "spam-bot",
   "version": "1.0.0",
   "description": "Spam bot for twitch.tv",
   "keywords": [
@@ -14,11 +14,11 @@
     "email": "fxhxyz@proton.me",
     "url": "https://fxhxyz.vercel.app/"
   },
-  "homepage": "https://github.com/fxhxyz4/spam_bot/",
-  "bugs": "https://github.com/fxhxyz4/spam_bot/issues",
+  "homepage": "https://github.com/fxhxyz4/spam-bot/",
+  "bugs": "https://github.com/fxhxyz4/spam-bot/issues",
   "repository": {
     "type": "git",
-    "url": "git://github.com/fxhxyz4/spam_bot.git"
+    "url": "git://github.com/fxhxyz4/spam-bot.git"
   },
   "maintainers": [
     {
