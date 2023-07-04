@@ -2,10 +2,10 @@
 
 ### Features:
 
-- ### [auto-spam](https://github.com/fxhxyz4/spam_bot#enable-auto-spam-change-this-line-in-config).
+- ### [auto-spam](https://github.com/fxhxyz4/spam-bot/edit/main/readme.md#enable-auto-spam-set-to-true).
 - ### [commands](https://github.com/fxhxyz4/spam_bot#commands-1).
 
-- ### [auto-ban]().
+- ### [auto-ban](https://github.com/fxhxyz4/spam-bot/edit/main/readme.md#enable-auto-ban-set-to-true-in-configjs).
 
 #
 
@@ -43,8 +43,9 @@ npm install
 ### edit config
 
 ```js
+id: "YOUR-TWITCH-ID",
 user: "YOUR-TWITCH-USER-NAME",
-token: "oauth:token", // https://twitchapps.com/tmi/
+token: "oauth:token", // https://twitchapps.com/tmi/ | https://chatix.com/token
 channels: ["#channel", "#channel2", "#channel3"], // channel list.
 // example: ["#xqc", "#forsen", "#fxhxyz"]
 ```
@@ -67,7 +68,7 @@ blist: ["word1", "word2"],
 
 #
 
-### enable auto-spam. change this line in config
+### enable auto-spam. set to true
 
 ```js
 spam: true;
@@ -86,14 +87,6 @@ count: 20, // amount messages
 
 #
 
-### change user_id in index.js
-
-```
-const user_id = "YOUR_TWITCH_ID";
-```
-
-#
-
 ### development
 
 ```
@@ -105,9 +98,7 @@ npm run dev
 ### deploy
 
 ```
-npm run server
+npm run dep
 ```
 
 #
-
-### License: [MIT](./license).
