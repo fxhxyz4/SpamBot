@@ -2,10 +2,10 @@
 
 ### Features:
 
-- ### [auto-spam](https://github.com/fxhxyz4/spam-bot/edit/main/readme.md#enable-auto-spam-set-to-true).
+- ### [auto-spam](https://github.com/fxhxyz4/spam-bot#enable-auto-spam-set-to-true).
 - ### [commands](https://github.com/fxhxyz4/spam_bot#commands-1).
 
-- ### [auto-ban](https://github.com/fxhxyz4/spam-bot/edit/main/readme.md#enable-auto-ban-set-to-true-in-configjs).
+- ### [auto-ban](https://github.com/fxhxyz4/spam-bot#enable-auto-ban-set-to-true-in-configjs).
 
 #
 
