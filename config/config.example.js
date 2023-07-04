@@ -1,5 +1,7 @@
 export const config = {
+  id: "84319848",
   user: "username",
+  prefix: "?",
   token: "oauth:token",
   channels: ["#channel", "#channel2", "#channel3"],
   ban: false,
