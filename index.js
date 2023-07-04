@@ -1,8 +1,19 @@
 import { config } from "./config/config.js";
 import tmi from "tmi.js";
 
-let { user, token, channels, ban, blist, spam, message = "ppL", repeat = 30, count = 15 } = config;
-const user_id = "603173186";
+let {
+  id,
+  user,
+  prefix,
+  token,
+  channels,
+  ban,
+  blist,
+  spam,
+  message = "ppL",
+  repeat = 30,
+  count = 15
+} = config;
 
 const opts = {
   options: {
@@ -40,26 +51,11 @@ if (spam === true) {
 }
 
 if (ban === true) {
-  client.on("message", checkChat);
-}
-
-function checkChat(channel, username, message) {
-  let shouldSendMessage = false;
-  message = message.toLowerCase();
-
-  shouldSendMessage = blist.some((blockedWord) => message.includes(blockedWord.toLowerCase()));
-  if (shouldSendMessage) {
-    client
-      .ban(channel, username.username)
-      .then((data) => {})
-      .catch((err) => {});
-
-    client.say(channel, `${username.username}, banned`);
-  }
+  client.on("message", banWord);
 }
 
 client.on("message", (channel, tags, message, self) => {
-  if (self || !message.startsWith(`?`)) return;
+  if (self || !message.startsWith(prefix)) return;
 
   const arr = message.slice(1).split(" ");
   const cmd = arr[0];
@@ -67,7 +63,7 @@ client.on("message", (channel, tags, message, self) => {
   const num = arr[1];
   const arg = arr[2];
 
-  if (cmd === "spam" && tags["user-id"] === user_id) {
+  if (cmd === "spam" && tags["user-id"] === id) {
     for (let i = 0; i < num; i++) {
       client.say(channel, `${arg}`);
     }
@@ -75,9 +71,27 @@ client.on("message", (channel, tags, message, self) => {
 });
 
 client.on("message", (channel, tags, message, self) => {
-  if (self) return;
+  if (self || !message.startsWith(prefix)) return;
 
-  if (message.toLowerCase() === `?ping` && tags["user-id"] === user_id) {
+  const arr = message.slice(1).split(" ");
+  const cmd = arr[0];
+
+  if (cmd === "ping" && tags["user-id"] === id) {
     client.say(channel, `@${tags.username}, pong`);
   }
 });
+
+function banWord(channel, username, message) {
+  let shouldSendMessage = false;
+  message = message.toLowerCase();
+
+  shouldSendMessage = blist.some((blockedWord) => message.includes(blockedWord.toLowerCase()));
+  if (shouldSendMessage) {
+    client
+      .ban(channel, username.username)
+      .then((d) => {})
+      .catch((e) => {});
+
+    client.say(channel, `${username.username}, banned`);
+  }
+}
