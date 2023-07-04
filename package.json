@@ -29,7 +29,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon .",
-    "server": "node ."
+    "dep": "node ."
   },
   "dependencies": {
     "tmi.js": "^1.8.5"
