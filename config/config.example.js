@@ -1,5 +1,5 @@
 export const config = {
-  id: "84319848",
+  id: "123",
   user: "username",
   prefix: "?",
   token: "oauth:token",
