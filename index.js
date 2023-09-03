@@ -46,7 +46,7 @@ if (spam === true) {
 
     setInterval(() => {
       client.connect();
-    }, 15 * 1000);
+    }, 15e3);
   });
 }
 
@@ -81,7 +81,7 @@ client.on("message", (channel, tags, message, self) => {
   }
 });
 
-function banWord(channel, username, message) {
+const banWord = (channel, username, message) => {
   let shouldSendMessage = false;
   message = message.toLowerCase();
 
@@ -92,6 +92,6 @@ function banWord(channel, username, message) {
       .then((d) => {})
       .catch((e) => {});
 
-    client.say(channel, `${username.username}, banned`);
+    client.say(channel, `${username.username}, banned TriHard`);
   }
 }
