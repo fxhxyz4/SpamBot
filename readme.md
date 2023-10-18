@@ -21,8 +21,8 @@
 ### installation
 
 ```
-git clone https://github.com/fxhxyz4/spam_bot.git
-cd spam_bot
+git clone https://github.com/fxhxyz4/spam-script.git
+cd spam-script
 code .
 ```
 
