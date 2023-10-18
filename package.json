@@ -1,9 +1,9 @@
 {
-  "name": "spam-bot",
+  "name": "spam-script",
   "version": "1.0.0",
   "description": "Spam script for twitch.tv",
   "keywords": [
-    "spam-bot",
+    "spam-script",
     "twitch-bot",
     "tmi.js"
   ],
@@ -14,11 +14,11 @@
     "email": "fxhxyz@proton.me",
     "url": "https://fxhxyz.vercel.app/"
   },
-  "homepage": "https://github.com/fxhxyz4/spam-bot/",
-  "bugs": "https://github.com/fxhxyz4/spam-bot/issues",
+  "homepage": "https://github.com/fxhxyz4/spam-script/",
+  "bugs": "https://github.com/fxhxyz4/spam-script/issues",
   "repository": {
     "type": "git",
-    "url": "git://github.com/fxhxyz4/spam-bot.git"
+    "url": "git://github.com/fxhxyz4/spam-script.git"
   },
   "maintainers": [
     {
