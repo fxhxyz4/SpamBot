@@ -1,4 +1,4 @@
-## Spam bot for [twitch.tv](twitch.tv) ![chatting)](https://cdn.betterttv.net/emote/618c77311f8ff7628e6d5b8f/1x.gif)
+## Spam script for [twitch.tv](twitch.tv) ![chatting)](https://cdn.betterttv.net/emote/618c77311f8ff7628e6d5b8f/1x.gif)
 
 ### Features:
 
